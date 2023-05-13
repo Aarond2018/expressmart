@@ -1,7 +1,7 @@
 {
   "name": "expressmart",
   "version": "1.0.0",
-  "description": "An MVC-based Node.js e-commerce application ",
+  "description": "An MVC-based server-side Node.js e-commerce application ",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
