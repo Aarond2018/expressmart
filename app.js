@@ -3,6 +3,8 @@ const path = require("path")
 const express = require("express")
 const bodyParser = require("body-parser")
 
+const connectDb = require("./utils/db")
+
 const app = express()
 
 app.set('view engine', 'ejs')
@@ -15,4 +17,9 @@ app.use("/", (req, res, next) => {
   return res.render("index")
 })
 
-app.listen(3000)
+try {
+  connectDb()
+  app.listen(3000)
+} catch (error) {
+  console.log(error)
+}
